@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: 255 255 255;
+  --foreground: 10 10 10;
+  --border: 229 229 229;
+}
+
+.dark {
+  --background: 0 0 0;
+  --foreground: 255 255 255;
+  --border: 38 38 38;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+/* --- react-pdf: remove “page cards/boxes” and keep it seamless --- */
+.react-pdf__Page {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.react-pdf__Page__canvas {
+  display: block !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+  display: none !important;
+}
