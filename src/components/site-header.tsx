@@ -2,80 +2,32 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { ThemeToggle } from "./theme-toggle";
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/links", label: "Links" },
-  { href: "/sauce", label: "Sauce" }, // ✅ added
-];
 
 export function SiteHeader() {
-  const pathname = usePathname();
-
   return (
-    <>
-      <header className="sticky top-0 z-50 border-b border-[rgb(var(--border))] bg-white dark:bg-black">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-30 py-2">
-          <Link href="/" className="flex items-center gap-8">
-            <div className="relative h-30 w-70 overflow-hidden rounded-md">
-              <Image
-                src="/AZORCO-5.png"
-                alt="Logo"
-                fill
-                priority
-                className="object-contain invert dark:invert-0"
-              />
-            </div>
-
-            <div className="text-3xl font-semibold tracking-tight text-black dark:text-white">
-              
-            </div>
-          </Link>
-
-          <div className="hidden items-center gap-8 md:flex">
-            <nav className="flex items-center gap-6">
-              {navItems.map((item) => {
-                const active =
-                  item.href === "/"
-                    ? pathname === "/"
-                    : pathname?.startsWith(item.href);
-
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={[
-                      "relative text-sm text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white",
-                      "pb-1",
-                      active ? "text-black dark:text-white" : "",
-                    ].join(" ")}
-                  >
-                    {item.label}
-                    <span
-                      className={[
-                        "absolute left-0 -bottom-0.5 h-[2px] w-full",
-                        active ? "bg-black dark:bg-white" : "bg-transparent",
-                      ].join(" ")}
-                    />
-                  </Link>
-                );
-              })}
-            </nav>
-
-            <ThemeToggle />
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-2 py-1 sm:px-20 sm:py-4">
+        <Link href="/" className="flex min-w-0 items-center">
+          <div className="relative h-15 w-50 overflow-hidden rounded-md sm:h-12 sm:w-60">
+            <Image
+              src="/azorco-5.png"
+              alt="Azorco logo"
+              fill
+              priority
+              className="object-contain"
+            />
           </div>
+        </Link>
 
-          <div className="flex items-center gap-3 md:hidden">
-            <ThemeToggle />
-          </div>
-        </div>
-      </header>
-
-      {/* This is the “strip below the header”. It matches theme. */}
-      <div className="h-0 bg-white dark:bg-black" />
-    </>
+        <a
+          href="YOUR_BOOKING_LINK_HERE"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-md bg-white px-2 py-2 text-xs font-bold text-black transition hover:opacity-90 sm:px-4 sm:py-2.5 sm:text-sm"
+        >
+          Book a Call
+        </a>
+      </div>
+    </header>
   );
 }
