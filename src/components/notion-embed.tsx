@@ -13,7 +13,7 @@ export function NotionEmbed({ src }: { src: string }) {
 
       {/* This overlays the Notion top bar (covers "Get Notion free", etc.) */}
       <div
-        className="pointer-events-none absolute left-0 top-0 h-10 w-full bg-white dark:bg-black"
+        className="pointer-events-none absolute left-0 top-0 h-11 w-full bg-white dark:bg-black"
         aria-hidden="true"
       />
     </div>

@@ -18,11 +18,11 @@ export function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[rgb(var(--border))] bg-white dark:bg-black">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-30 py-2">
           <Link href="/" className="flex items-center gap-8">
-            <div className="relative h-18 w-18 overflow-hidden rounded-md">
+            <div className="relative h-30 w-70 overflow-hidden rounded-md">
               <Image
-                src="/Logo1.png"
+                src="/AZORCO-5.png"
                 alt="Logo"
                 fill
                 priority
@@ -31,7 +31,7 @@ export function SiteHeader() {
             </div>
 
             <div className="text-3xl font-semibold tracking-tight text-black dark:text-white">
-              Adam Krol
+              
             </div>
           </Link>
 
