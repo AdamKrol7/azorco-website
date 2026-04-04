@@ -10,7 +10,7 @@ export function SiteHeader() {
         <Link href="/" className="flex min-w-0 items-center">
           <div className="relative h-15 w-50 overflow-hidden rounded-md sm:h-12 sm:w-60">
             <Image
-              src="/azorco-5.png"
+              src="/azorco-6.png"
               alt="Azorco logo"
               fill
               priority
