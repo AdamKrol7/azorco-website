@@ -20,7 +20,7 @@ export function SiteHeader() {
         </Link>
 
         <a
-          href="YOUR_BOOKING_LINK_HERE"
+          href="https://calendly.com/adam-azorco/30min"
           target="_blank"
           rel="noreferrer"
           className="inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-md bg-white px-2 py-2 text-xs font-bold text-black transition hover:opacity-90 sm:px-4 sm:py-2.5 sm:text-sm"
