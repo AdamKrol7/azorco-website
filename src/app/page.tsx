@@ -1,10 +1,7 @@
 // src/app/page.tsx
-import { NotionEmbed } from "@/components/notion-embed";
+
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return (
-    <main className="w-full bg-white dark:bg-black">
-      <NotionEmbed src="https://v2-embednotion.com/32fe4ae236a380979f01f3e50f3eddf5" />
-    </main>
-  );
+  redirect("/leads");
 }
